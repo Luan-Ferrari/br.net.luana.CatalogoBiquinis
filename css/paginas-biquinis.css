@@ -1,0 +1,335 @@
+body{
+    background: rgb(34, 34, 34);
+}
+
+.main {
+    width: 100%;
+    max-width: 2100px;
+}
+
+.main-box{
+    background: rgb(240, 240, 240);
+    width: 55%; 
+    min-width: 975px;
+    height: 630px;
+    top: 200px;
+    padding: 0 5%;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+/**estilizacoa do carrossel no modelo checkbox hack**/
+.carrossel{
+    width: 100%;
+    margin: 0 auto;
+    top: -6em;
+    left: -8em;
+    position: absolute;
+    
+}
+
+.item-carrossel{
+    position: absolute;
+    width: 46%;
+    min-width: 530px;
+    max-width: 570px;
+    box-shadow: 10px 10px 10px -5px rgba(34, 34, 34, 0.15);
+}
+
+.item-carrossel input{
+    display: none;
+}
+/**feito para fazer o botão do input radio subir, dessa forma só aparece a label que é estilizada abaixo**/
+
+.botao-troca-direita{
+    color: rgb(255, 0, 160);
+    font-size: 5em;
+    font-weight: bold;
+    font-family: monospace;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    z-index: 8;
+    top: 50%;
+    right: 7%;
+    transform: translate(50%, 0);
+    visibility: hidden;
+    text-shadow: 0px 0px 5px white;
+}
+
+.botao-troca-esquerda{
+    color: rgb(255, 0, 160);
+    font-size: 5em;
+    font-weight: bold;
+    font-family: monospace;
+    border-color: white;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    z-index: 8;
+    top: 50%;
+    left: 3%;
+    transform: translate(50%, 0);
+    visibility: hidden;
+    text-shadow: 0px 0px 5px white;
+}
+
+.botao-troca-inferior{
+    background: white;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    width: 10px;
+    z-index: 8;
+}
+
+.item-carrossel:nth-child(1) .botao-troca-inferior{
+    left: 5%;
+}
+
+.item-carrossel:nth-child(2) .botao-troca-inferior{
+    left: 10%;
+}
+
+.item-carrossel:nth-child(3) .botao-troca-inferior{
+    left: 15%
+}
+
+.item-carrossel:nth-child(4) .botao-troca-inferior{
+    left: 20%
+}
+
+.item-carrossel:nth-child(5) .botao-troca-inferior{
+    left: 25%
+}
+
+.item-carrossel:nth-child(6) .botao-troca-inferior{
+    left: 30%
+}
+
+.item-carrossel:nth-child(7) .botao-troca-inferior{
+    left: 35%
+}
+
+.item-carrossel:nth-child(8) .botao-troca-inferior{
+    left: 40%
+}
+
+.item-carrossel:nth-child(9) .botao-troca-inferior{
+    left: 45%
+}
+
+.item-carrossel:nth-child(10) .botao-troca-inferior{
+    left: 50%
+}
+
+.item-carrossel:nth-child(11) .botao-troca-inferior{
+    left: 55%
+}
+
+.item-carrossel:nth-child(12) .botao-troca-inferior{
+    left: 60%
+}
+
+.item-carrossel:nth-child(13) .botao-troca-inferior{
+    left: 65%
+}
+
+.item-carrossel:nth-child(14) .botao-troca-inferior{
+    left: 70%
+}
+
+.item-carrossel:nth-child(15) .botao-troca-inferior{
+    left: 75%
+}
+
+.item-carrossel:nth-child(16) .botao-troca-inferior{
+    left: 80%
+}
+
+.item-carrossel:nth-child(17) .botao-troca-inferior{
+    left: 85%
+}
+
+.item-carrossel:nth-child(18) .botao-troca-inferior{
+    left: 90%
+}
+
+.item-carrossel:nth-child(19) .botao-troca-inferior{
+    left: 95%
+}
+/** aqui foi usado seletores avançados para posicionar os botões do carrossel,
+me parece que colocar uma id para cada label e estilizar através do id ficaria mais legível.
+Outro ponto que certa vez li que seletores avançados exigem maior processamento, o quanto isso
+pode atingir a performance do site?**/
+
+.banner {
+    visibility: hidden;
+}
+
+.imagem-banner{
+    width: 100%;
+} 
+
+.item-carrossel input:checked ~ .botao-troca-inferior{
+    background: rgb(255, 0, 160);
+}
+
+.item-carrossel input:checked ~ .banner{
+    visibility: visible;
+    width: 100%;
+}
+
+.item-carrossel input:checked ~ .botao-troca-direita{
+    visibility: visible;
+}
+
+.item-carrossel input:checked ~ .botao-troca-esquerda{
+    visibility: visible;
+}
+
+.item-carrossel input:checked ~ .texto-conjunto{
+    visibility: visible;
+}
+
+.item-carrossel input:checked ~ .titulo{
+    visibility: visible;
+}
+/** ~ é um seletor de irmaos, aqui ele é utilizado para aplicar estilo somente a img irmão de um input com a situação de checked(selecionado)**/
+
+.titulo {
+    width: 60%;
+    position: absolute;
+    top: 130px;
+    left: 105%;
+    font-size: 2em;
+    visibility: hidden;
+    color: rgb(34, 34, 34);
+}
+
+.texto-conjunto {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    left: 105%;
+    font-size: 1.3em;
+    visibility: hidden;
+    color: rgb(34, 34, 34);
+}
+
+.texto-conjunto a{
+    color: rgb(34, 34, 34);
+}
+
+.texto-conjunto a:hover{
+    color: rgb(255, 0, 160);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1800px){
+    .item-carrossel {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .main-box {
+        width: 30%;
+        min-width: 780px;
+    }
+
+    .item-carrossel {
+        left: 14%;
+    }
+
+    .texto-conjunto {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .main-box {
+        width: 20%;
+        min-width: 500px;
+        height: 750px;
+    }
+
+    .item-carrossel {
+        left: 26%;
+    }
+
+    .texto-conjunto {
+        top: 780px;
+        width: 100%;
+        left: 1px;
+    }
+
+    .titulo {
+        top: 730px;
+        width:60%;
+        left: 1px;
+        }
+
+    .botao-troca-direita {
+        font-size: 4em;
+    }
+    
+    .botao-troca-esquerda {
+        font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-box {
+        width: 40%;
+        padding: 0 5%;
+        min-width: 320px;
+        height: 590px;
+        
+    }
+
+    .item-carrossel {
+        width: 90%;
+        left: 36%;
+        min-width: 310px;
+        vertical-align: middle;
+    }
+
+    .texto-conjunto {
+        top: 110%;
+        width: 70%;
+        left: 1px;
+        line-height: 30px;
+    }
+
+    .titulo {
+        font-size: 1.8em;
+        top: 103%;
+        width: 90%;
+        left: 1px;
+        }
+
+    .botao-troca-direita {
+        font-size: 3em;
+    }
+    
+    .botao-troca-esquerda {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .item-carrossel {
+        left: 38%;
+        min-width: 280px;
+    }
+
+    .titulo {
+        font-size: 1.7em;
+        min-width: 280px;
+        }
+}

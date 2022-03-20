@@ -1,0 +1,63 @@
+.header{
+    /*visibility: hidden; somente para sumir o header para poder trabalhar */
+    background: rgba(15,15,15,90%);
+    width: 100%;
+    position: fixed;
+    z-index:10;
+}
+
+.header-box{
+    position: relative;
+    width: 100%;
+    max-width: 2100px;
+    margin: 0 auto;
+    padding: 0 5%;
+    font-family: Arial, sans-serif;
+}
+
+.logo{
+    height: 3.5em;
+    margin: 0.3em 0 0.3em 0;
+}
+
+.menu-header{
+    color: #e7e7e7;
+    position: absolute;
+    top: -1.6em;
+    right: 20%;
+    height: 6em;
+    margin: 1em;
+}
+
+.menu-header li{
+    display: inline-block;
+    padding: 2.5em;
+    font-size: 1em; /**(2.5em x 2) + 1em = 6em = height de .menu-header**/
+
+    position: absolute;
+}
+
+.menu-header li a{
+    color: rgb(240, 240, 240);
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+.menu-header li a:hover {
+    color: rgb(255, 0, 160);
+    text-decoration: underline;
+        /**mudar o cursor para a maozinha de clicar em link, vai fazer automatico após associar a tag <a>?**/
+}
+
+@media screen and (max-width: 600px){
+    .menu-header{
+        margin-right: 10%;
+        right: 25%;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .menu-header {
+        right: 25%;
+    }
+}

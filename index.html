@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Confecções Luana - Catálogos</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="header-box">
+                <h1><img class="logo" src="imagens/logo.svg" alt="Logotipo Confecções Luana"></h1>
+                <ul class="menu-header">
+                    <li>Home</li>
+                    <li>Contatos</li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="main-box">
+                <ul class="carrossel">
+                    <li class="item-carrossel">
+                        <input type="radio" id="catalogo1" name="catalogo" checked>
+                        <label class="botao-troca-direita" for="catalogo2">></label>
+                        <label class="botao-troca-esquerda" for="catalogo2"><</label>
+                        <label class="botao-troca-inferior" for="catalogo1"></label>
+                        <div class="catalogo">
+                            <h2 class="titulo-catalogo">Moda Praia</h2>
+                            <img class="imagem-catalogo" src="imagens/praia.svg" alt="Imagem praia">
+                        </div>
+                    </li>
+                    <li class="item-carrossel">
+                        <input type="radio" id="catalogo2" name="catalogo">
+                        <label class="botao-troca-direita" for="catalogo1">></label>
+                        <label class="botao-troca-esquerda" for="catalogo1"><</label>
+                        <label class="botao-troca-inferior" for="catalogo2"></label>
+                        <div class="catalogo">
+                            <h2 class="titulo-catalogo">Suplex</h2>
+                            <img class="imagem-catalogo" src="imagens/suplex.svg" alt="Imagem suplex">
+                        </div>
+                    </li>
+                </ul>
+                <div class="sombra-catalogo-carrossel">
+
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

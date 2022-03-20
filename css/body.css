@@ -1,0 +1,141 @@
+body{
+    background: rgb(15,15,15);
+}
+
+.main {
+    background-color: rgb(240,240,240);
+}
+
+.main-box{
+    position: static;
+    width: 1900px; 
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/**estilizacoa do carrossel no modelo checkbox hack**/
+.carrossel{
+    display: block;
+    margin: auto;
+    position: relative;
+}
+
+.item-carrossel{
+    position: absolute;
+}
+
+.item-carrossel input{
+    display: none;
+}
+/**feito para fazer o botão do input radio subir, dessa forma só aparece a label que é estilizada abaixo**/
+
+.botao-troca-direita{
+    color: white; 
+    font-size: 4em;
+    font-family: monospace;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    z-index: 8;
+    top: 50%;
+    right: 5%;
+    transform: translate(50%, 0);
+    visibility: hidden;
+}
+
+.botao-troca-esquerda{
+    color: white;
+    font-size: 4em;
+    font-family: monospace;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+    z-index: 8;
+    top: 50%;
+    left: 5%;
+    transform: translate(50%, 0);
+    visibility: hidden;
+}
+
+.botao-troca-inferior{
+    background: white;
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    width: 15px;
+    z-index: 8;
+}
+
+.item-carrossel:nth-child(1) .botao-troca-inferior{
+    left: 48%;
+}
+
+.item-carrossel:nth-child(2) .botao-troca-inferior{
+    left: 50%;
+}
+
+.item-carrossel:nth-child(3) .botao-troca-inferior{
+    left: 52%
+}
+/** aqui foi usado seletores avançados para posicionar os botões do carrossel,
+me parece que colocar uma id para cada label e estilizar através do id ficaria mais legível.
+Outro ponto que certa vez li que seletores avançados exigem maior processamento, o quanto isso
+pode atingir a performance do site?**/
+
+.catalogo {
+    visibility: hidden;
+}
+
+.titulo-catalogo{
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 5px 3px 3px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    /**position absolute, top 50%, left 50%, e os valores de transform 50% alinham um texto absolute ao centro da div pai**/
+}
+
+.texto-catalogo{
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagem-catalogo{
+    width: 100%;
+}
+
+.item-carrossel input:checked ~ .botao-troca-inferior{
+    background: rgb(15,15,15);
+}
+
+.item-carrossel input:checked ~ .catalogo{
+    visibility: visible;
+}
+
+.item-carrossel input:checked ~ .botao-troca-direita{
+    visibility: visible;
+}
+
+.item-carrossel input:checked ~ .botao-troca-esquerda{
+    visibility: visible;
+}
+/** ~ é um seletor de irmaos, aqui ele é utilizado para aplicar estilo somente a img irmão de um input com a situação de checked(selecionado)**/
+
+.sombra-catalogo-carrossel{
+    width: 100%;
+    height: 600px;
+    display: block;
+    box-shadow: inset 0px 0px 10px 20px rgb(15,15,15);
+    position: relative;
+    margin: 0 auto;
+    /**Esse estilo aplica sombra interna aos banners do carrossel, height 600px porque as imagens do banner possuem essa altura**/
+}
